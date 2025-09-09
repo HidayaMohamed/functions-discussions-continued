@@ -13,4 +13,5 @@ difference between arrow functions and regulare functions
  a. syntax difference: Arrow functions are defined with => while regular functions are defined with function keyword.
  b. Normal functions have their own argument while arrow functions do not have their own arguments but inherit from their outer scope.
  c. normal funtions can be used with constructors (new) while arrow functions can't be used as constructors.
+ 
 
