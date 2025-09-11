@@ -1,64 +1,53 @@
 // Original function 1:
-function greet(name) {
-  return "Hello, " + name + "!";
-}
-// Arrow function
+// function greet(name) {
+//     return "Hello, " + name + "!";
+// }
 
-const greet = (name) => "Hello, " + name + "!";
+const greet = name => `Hello ${name}`;
 
-console.log(greet("Hidaya"));
+console.log(greet())
 
 // Original function 2:
-function calculateTotal(price, tax, tip) {
-  const subtotal = price + price * tax;
-  const total = subtotal + subtotal * tip;
+// function calculateTotal(price, tax, tip) {
+//     const subtotal = price + (price * tax);
+//     const total = subtotal + (subtotal * tip);
+//     return total;
+// }
+
+
+const calculateTotal = (price, tax, tip) => {
+  const subtotal = price + (price * tax);
+  const total = subtotal + (subtotal * tip);
   return total;
 }
-//  Arrow function
-const calculateTotal = (price, tax, tip) => {
-  const subtotal = price + price * tax;
-  const total = subtotal + subtotal * tip;
-  return total;
-};
-
-console.log(calculateTotal(100, 20, 50));
+console.log(calculateTotal(100, 3, 50))
 
 // Original function 3:
-function isEven(number) {
-  return number % 2 === 0;
-}
-const isEven = (number) => number % 2 === 0;
+// function isEven(number) {
+//     return number % 2 === 0;
+// }
 
-console.log(isEven(11));
-// - What syntax changes did you make?
-/* Replaced the function keyword with =>
-    we removes the return keyword since arrow functions have implicit return.
-    we removed the curly brackets in instances where our code was just a single line. 
+const isEven = number => number % 2 === 0;
 
-// - When can you omit parentheses around parameters?
-/* when u only have a single parameter.
-// - When can you omit the 'return' keyword?
-/* when the arrow function is a single line of code.*/
-// - Which style do you find more readable and why?
-// Regular functions
+console.log(isEven(6))
 
-// Arrow Functions with Arrays
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+//  evens
 
-const evens = (numbers) => {
-  const evens = numbers.filter((n) => n % 2 === 0);
-};
+const evenNumbers = numbers.filter((number) => number % 2 === 0);
 
-console.log(evens);
+console.log(evenNumbers)
 
-const doubled = (numbers) => {
-  const doubled = numbers.map((n) => n * 2);
-};
-console.log(doubled);
+// doubled 
 
-const sum = (numbers) => {
-  const sum = numbers.reduce((acc, n) => acc + n, 0);
-};
-console.log(sum);
+const doubledNumbers = numbers.map(number => number * 2);
+
+console.log(doubledNumbers)
 
 
+// sum
+
+const sumNumbers = numbers.reduce((accumulator, number) =>  accumulator + number, 0  );
+ 
+
+console.log(sumNumbers)
